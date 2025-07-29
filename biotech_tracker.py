@@ -3,15 +3,18 @@
 """
 @author: Jack Denebeim
 """
- 
+
+import os
 import requests
 from bs4 import BeautifulSoup
 import datetime
 import smtplib
 from email.mime.text import MIMEText
 
+email = os.environ["EMAIL_ADDRESS"]
+password = os.environ["EMAIL_APP_PASSWORD"]
 url = "https://www.biospace.com/biospace-layoff-tracker"
- 
+
 response = requests.get(url)
  
 # Check if the request was successful
