@@ -34,6 +34,7 @@ for child in (soup.find_all('b')):
                 mon_num = datetime.datetime.strptime(mon, '%B').month
             day_num = sib.text.split(sep = " ")[1]
             date = datetime.date(2025, int(mon_num), int(day_num))
+            print(date)
             email_message = date.today().strftime("%B %d, %Y")
             if date == datetime.date.today():
                 email_message += f"\nThere was an update!\n{url}"
