@@ -24,8 +24,6 @@ if response.status_code == 200:
 else:
     print(f"Failed to retrieve content. Status code: {response.status_code}")
  
- 
- 
 for child in (soup.find_all('b')):
     for sib in child.next_siblings:
         if(sib.name == 'i'):
@@ -53,7 +51,8 @@ def send_email(subject, body, sender_email, app_password):
         server.login(sender_email, app_password)
         server.send_message(msg)
  
-
+print(date.today())
+print(date)
 print(email_message)   
 
 send_email(
