@@ -36,7 +36,7 @@ for child in (soup.find_all('b')):
             date = datetime.date(2025, int(mon_num), int(day_num))
             print(date)
             email_message = date.today().strftime("%B %d, %Y")
-            if date == datetime.date.today():
+            if str(date) == str(datetime.date.today()):
                 email_message += f"\nThere was an update!\n{url}"
             else:
                 email_message += "\nNo updates today."
