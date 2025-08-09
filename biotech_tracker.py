@@ -44,7 +44,7 @@ for child in (soup.find_all('b')):
                     found_update = True
 
 if (not found_update):
-    email_message += "\nNo updates today.\n{url}"
+    email_message += f"\nNo updates today.\n{url}"
 
 def send_email(subject, body, sender_email, app_password):
     msg = MIMEText(body)
